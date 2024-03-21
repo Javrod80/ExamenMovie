@@ -1,5 +1,6 @@
 package com.example.movieapp.activities
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -40,16 +41,22 @@ class DetailActivity : AppCompatActivity() {
 
     }
 
+    @SuppressLint("SetTextI18n")
     private fun loadData() {
 
         Picasso.get().load(movies.poster).into(binding.imageMovies)
         binding.Sipnosis.text = "Plot : ${movies.plot}"
         binding.director.text = "Director : ${movies.director}"
         binding.duracion.text = "Runtime : ${movies.runtime}"
-        binding.genero.text = "Genre : ${movies.genre.toString()}"
+        binding.genero.text = "Genre : ${movies.genre}"
         binding.movieName.text = "Name : ${movies.title}"
         binding.pais.text = "Country : ${movies.country}"
         binding.year.text = "Year : ${movies.year}"
+        binding.awards.text = "Awards : ${movies.awards}"
+        binding.votes.text = "Votes : ${movies.votes}"
+        binding.released.text = "Released : ${movies.released}"
+        binding.rating.text = "Rating :  ${movies.rating}"
+
 
 
     }

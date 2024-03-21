@@ -49,6 +49,8 @@ class MovieAdapter (private var items: List<Movies> = listOf(), val onClickListe
 
             binding.textViewMovies.text = movies.title
             binding.textViewYear.text = movies.year
+
+
            Picasso.get().load(movies.poster).into(binding.movieImageView)
         }
 

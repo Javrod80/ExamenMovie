@@ -42,6 +42,8 @@ class MainActivity : AppCompatActivity() , OnQueryTextListener {
 
 
 
+
+
     }
     private fun initRecyledView() {
         adapter = MovieAdapter(moviesList) {
@@ -59,6 +61,8 @@ class MainActivity : AppCompatActivity() , OnQueryTextListener {
         intent.putExtra("MOVIES_ID", movies.id)
 
         startActivity(intent)
+
+
 
     }
     private fun searchMovies(query: String) {
@@ -124,6 +128,8 @@ class MainActivity : AppCompatActivity() , OnQueryTextListener {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
 
 
 
