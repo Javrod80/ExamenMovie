@@ -7,7 +7,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.movieapp.activities.data.MovieServiceApi
 import com.example.movieapp.activities.data.Movies
-import com.example.movieapp.databinding.ActivityDetail2Binding
+import com.example.movieapp.databinding.ActivityDetailBinding
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class DetailActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityDetail2Binding
+    private lateinit var binding: ActivityDetailBinding
 
     private lateinit var movies: Movies
     private var movieId: String? = null
@@ -29,7 +29,7 @@ class DetailActivity : AppCompatActivity() {
 
 
 
-        binding = ActivityDetail2Binding.inflate(layoutInflater)
+        binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         movieId = intent.getStringExtra("MOVIES_ID")
@@ -44,14 +44,14 @@ class DetailActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     private fun loadData() {
 
-        Picasso.get().load(movies.poster).into(binding.imageMovies)
-        binding.Sipnosis.text = "Plot : ${movies.plot}"
+        Picasso.get().load(movies.poster).into(binding.movieImageView)
+        binding.plot.text = "Plot : ${movies.plot}"
         binding.director.text = "Director : ${movies.director}"
-        binding.duracion.text = "Runtime : ${movies.runtime}"
-        binding.genero.text = "Genre : ${movies.genre}"
-        binding.movieName.text = "Name : ${movies.title}"
-        binding.pais.text = "Country : ${movies.country}"
-        binding.year.text = "Year : ${movies.year}"
+        binding.runtime.text = "Runtime : ${movies.runtime}"
+        binding.genre.text = "Genre : ${movies.genre}"
+        binding.textViewMovies.text =  movies.title
+        binding.country.text = "Country : ${movies.country}"
+        binding.textViewYear.text = "Year : ${movies.year}"
         binding.awards.text = "Awards : ${movies.awards}"
         binding.votes.text = "Votes : ${movies.votes}"
         binding.released.text = "Released : ${movies.released}"

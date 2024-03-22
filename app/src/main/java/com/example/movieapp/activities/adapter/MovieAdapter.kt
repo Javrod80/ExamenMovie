@@ -7,6 +7,8 @@ import com.example.movieapp.activities.data.Movies
 import com.example.movieapp.databinding.ItemMovieBinding
 import com.squareup.picasso.Picasso
 
+
+
 class MovieAdapter (private var items: List<Movies> = listOf(), val onClickListener :(position: Int) -> Unit):
     RecyclerView.Adapter<MovieAdapter.MoviesViewHolder>()
 {
@@ -47,9 +49,8 @@ class MovieAdapter (private var items: List<Movies> = listOf(), val onClickListe
 
         fun render (movies: Movies){
 
-            binding.textViewMovies.text = movies.title
-            binding.textViewYear.text = movies.year
-
+            binding.textViewMovies.setText(movies.title)
+            binding.textViewYear.setText(movies.year)
 
            Picasso.get().load(movies.poster).into(binding.movieImageView)
         }
