@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import com.example.movieapp.activities.data.MovieServiceApi
 import com.example.movieapp.activities.data.Movies
@@ -49,7 +50,7 @@ class DetailActivity : AppCompatActivity() {
         binding.director.text = "Director : ${movies.director}"
         binding.runtime.text = "Runtime : ${movies.runtime}"
         binding.genre.text = "Genre : ${movies.genre}"
-        binding.textViewMovies.text =  movies.title
+        binding.movieName.text =  movies.title
         binding.country.text = "Country : ${movies.country}"
         binding.textViewYear.text = "Year : ${movies.year}"
         binding.awards.text = "Awards : ${movies.awards}"
@@ -81,6 +82,9 @@ class DetailActivity : AppCompatActivity() {
                 } else {
                     Log.i("HTTP", "respuesta incorrecta")
                 }
+                hideKeyboard()
+
+
 
             }
 
@@ -102,6 +106,10 @@ class DetailActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
 
 
+    }
+    private fun hideKeyboard() {
+        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(binding.root.windowToken, 0)
     }
 
 

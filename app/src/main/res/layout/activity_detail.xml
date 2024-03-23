@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@android:color/system_accent1_200"
+        android:background="@color/white"
         tools:ignore="NewApi">
 
 
@@ -25,23 +25,20 @@
             tools:layout_editor_absoluteX="0dp" />
 
 
-        <TextView
-            android:id="@+id/textViewMovies"
+        <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Movie"
             android:textAppearance="?attr/textAppearanceHeadline6"
-            android:textColor="@color/black"/>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_corner"
+            android:id="@+id/movieName"/>
 
 
-            <TextView
+
+
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/textViewYear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,9 +47,11 @@
                 android:text="Year"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                android:background="@drawable/rounded_corner"
+                android:layout_marginTop="10dp"/>
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/released"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,72 +59,90 @@
                 android:text="Released"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 app:layout_constraintTop_toBottomOf="@id/textViewYear"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                android:background="@drawable/rounded_corner"
+                android:layout_marginTop="10dp"/>
 
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/runtime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Runtime"
                 android:textAppearance="?attr/textAppearanceHeadline6"
-                app:layout_constraintTop_toBottomOf="@id/released" />
+                app:layout_constraintTop_toBottomOf="@id/released"
+                android:background="@drawable/rounded_corner"
+                android:layout_marginTop="10dp"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <TextView
+
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/plot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Plot"
-            android:textAppearance="?attr/textAppearanceHeadline6" />
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginTop="10dp"/>
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/director"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Director"
-            android:textAppearance="?attr/textAppearanceHeadline6" />
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginTop="10dp"/>
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/country"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Country"
-            android:textAppearance="?attr/textAppearanceHeadline6" />
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginTop="10dp"/>
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/genre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Genero"
-            android:textAppearance="?attr/textAppearanceHeadline6" />
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginTop="10dp"/>
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/awards"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Awards"
-            android:textAppearance="?attr/textAppearanceHeadline6" />
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginTop="10dp"/>
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/votes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Votes"
             android:textAppearance="?attr/textAppearanceHeadline6"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="330dp" />
+            tools:layout_editor_absoluteY="330dp"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginTop="10dp"/>
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/rating"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Rating"
             android:textAppearance="?attr/textAppearanceHeadline6"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="303dp" />
+            tools:layout_editor_absoluteY="303dp"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 
